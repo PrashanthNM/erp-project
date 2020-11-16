@@ -1,0 +1,74 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPDATE ATTENDENCE</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+</head>
+<body>
+
+    <p>hello {{name}}</p> 
+    <p>subject:{{subject}}</p>
+        
+    <table border="1" >
+        <caption class="captions">STDUENTS ATTENDENCE DETAILS</caption>
+        <!-- <caption>studentsmarks</caption> -->
+        <tr>
+            <th >NAME</th>
+            <th>USN</th>
+            <th>CLASS CONDUCTED</th>
+            <th>CLASSES ATTENDED</th>
+        </tr>
+        <form action="teacher_update_attendence.html" method="POST" >
+
+            <tr>
+                    {% csrf_token %}
+
+                <td>AKHIL</td>
+                <td>1CR19CS101</td>
+                <td><input type="text" name="akhil_c"></td>
+                <td><input type="text" name="akhil_a"></td>
+
+                
+            </tr>
+            <tr>
+                <td>BHAVNA</td>
+                <td>1CR19CS102</td>
+                <td><input type="text" name="bhavana_c"></td>
+                <td><input type="text" name="bhavana_a"></td>
+                
+            </tr>
+            <tr>
+                <td>CHETNA</td>
+                <td>1CR19CS103</td>
+                <td><input type="text" name="chetna_c"></td>
+                <td><input type="text" name="chetna_a"></td>
+                
+            </tr>
+            <tr>
+                <td>DIPTI</td>
+                <td>1CR19CS104</td>
+                <td><input type="text" name="dipti_c" ></td>
+                <td><input type="text" name="dipti_a" ></td>
+                
+            </tr>
+            <tr>
+                <td>GREESHMA</td>
+                <td>1CR19CS105</td>
+                <td><input type="text" name="greeshma_c"></td>
+                <td><input type="text" name="greeshma_a" ></td>
+                
+            </tr>
+        <button type="submit" class="button" >submit</button>
+
+
+        </form>   
+  
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+</head>
+<body>
+    <h1>CMR INSTITUTE OF TECHNOLOGY</h1>
+    {% csrf_token  %}
+
+
+    <a href="students_marks.html" class="link" target="_blank"><div class="member"><p id="title">VIEW MARKS</p></div></a>
+	<a href="students_attendence.html" class="link" target="_blank"><div class="member"><p id="title">VIEW ATTENDANCE</p></div></a>
+    <a href="" class="link" target="_blank"><div class="member"><p id="title">GIVE FEEDBACK</p></div></a>
+
+</body>
+</html>

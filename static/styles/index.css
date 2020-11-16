@@ -1,0 +1,44 @@
+*{
+	box-sizing: border-box;
+}
+h1{
+	color: red;
+	text-align: center;
+	margin-bottom: auto;
+}
+
+#title{
+	font-weight: bold;
+	font-size: 2em;
+	color: white;
+	text-align: center;
+    padding-top: 8%;
+}
+.link{
+    text-decoration: none;
+}
+.member{
+	background-color: rgb(75, 148, 88);
+	height:200px;
+	width: 70%;
+	margin-left: 15%;
+	margin-bottom: 5%;
+}
+
+@media(max-width: 968px)
+
+{
+
+    .h1{
+        margin-bottom: 30px;
+    }
+    .member{
+        width: 70%;
+        margin-left: 15%;
+
+    }
+
+    #title{
+        padding-top: 25%;
+    }
+}

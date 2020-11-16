@@ -1,0 +1,42 @@
+table{
+    border-collapse: collapse;
+    width: auto;
+    margin-left: 25%;
+
+}
+tr,td,th{
+    border: 1px solid #d6cfcf;
+}
+.captions{
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: red;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+:nth-child(2n)
+{
+}
+form{
+    width;
+}
+.button{
+    background-color: green;
+    margin-left: 58%;
+    margin-top: 20px;
+}
+@media(max-width:700px)
+{
+    table{
+        border-collapse: collapse;
+        width:80%;
+        margin-left:5%;
+        
+    }
+    .button{
+        margin-left:120%
+    }
+
+
+
+}

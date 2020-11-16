@@ -1,0 +1,29 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login/SignUp Form</title>
+	<link rel="stylesheet" href="{% static 'styles/register.css' %}">
+</head>
+<body>
+	<div class="signup">
+		<h1>SignIn</h1>
+		<form method="POST" action="login.html" method="post">
+            {% csrf_token  %}
+
+			<input type="text" class="input-box" placeholder="username" name="name">
+			<input type="password" class="input-box" placeholder="Your Password" name="password">
+			<button type="submit" class="sign-btn" >Login</button>
+			<hr>
+		</form>
+    </div>
+    <div>
+        {%for message in messages %}
+        <h3> {{message}}</h3>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>

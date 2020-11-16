@@ -1,0 +1,82 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students_marks</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+</head>
+<body>
+
+    <p>hello {{name}}</p> 
+
+
+
+    <table border="1" >
+        <caption class="captions">STDUENTS MARKS DETAILS</caption>
+        <tr>
+            <th >SUBJECT</th>
+            <th>TOTAL MARKS</th>
+            <th>OBTAINED MARKS</th>
+        </tr>
+        <!-- student_object is a lsit of list..each list is a table ..and the rows in the table is represented as as tuple in the list -->
+        
+        <tr>
+        {% for rows in  student_object.0 %}
+        {% if rows.0 == name|upper %}
+            <td>MATHS</td>
+            <td class="center">{{rows.4}}</td>
+            <td class="center">{{rows.5}}</td>
+        {% endif %}
+        {% endfor %} 
+        
+
+            
+        </tr>
+        <tr>
+        {% for rows in  student_object.1 %}
+        {% if rows.0 == name|upper %}
+            <td>PHYSICS</td>
+            <td class="center">{{rows.4}} </td>
+            <td class="center">{{rows.5}}</td>
+        {% endif %}
+        {% endfor %} 
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.2 %}
+            {% if rows.0 == name|upper %}
+            <td>COMPUTER</td>
+            <td class="center"> {{rows.4}} </td>
+            <td class="center"> {{rows.5}} </td>
+            {% endif %}
+            {% endfor %} 
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.3 %}
+            {% if rows.0 == name|upper %}
+            <td>CHEMISTRY</td>
+            <td class="center">{{rows.4}}</td>
+            <td class="center">{{rows.5}}</td>
+            {% endif %}
+            {% endfor %} 
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.4 %}
+            {% if rows.0 == name|upper %}
+            <td>ENGLISH</td>
+            <td class="center">{{rows.4}}</td>
+            <td class="center">{{rows.5}}</td>
+            {% endif %}
+            {% endfor %}
+            
+            
+        </tr>
+    
+</body>
+</html>

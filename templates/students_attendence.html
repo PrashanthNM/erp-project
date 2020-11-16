@@ -1,0 +1,80 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students_attendence</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/index.css' %}">
+
+    <link rel="stylesheet" href="{% static 'styles/table.css' %}">
+</head>
+<body>
+
+    <table border="1" >
+        <caption class="captions">STUDENT ATTENDANCE DETAILS</caption>
+        {% csrf_token  %}
+
+        <!-- <caption>studentsmarks</caption> -->
+        <tr>
+            <th >NAME</th>
+            <th>CLASSES CONDUCTED</th>
+            <th>CLASSES ATTENDED</th>
+        </tr>
+        <tr>
+           
+
+            <td>MATHS</td>
+            {% for rows in  student_object.0 %}
+            {% if rows.0 == name|upper %}
+            <td class="center">{{rows.2}}</td>
+            <td class="center">{{rows.3}}</td>
+            {% endif %}
+            {% endfor %}
+
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.1 %}
+            {% if rows.0 == name|upper %}
+            <td>PHYSICS</td>
+            <td class="center">{{rows.2}}</td>
+            <td class="center">{{rows.3}}</td>
+            {% endif %}
+            {% endfor %}
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.2 %}
+            {% if rows.0 == name|upper %}
+            <td>COMPUTER</td>
+            <td class="center"> {{rows.2}} </td>
+            <td class="center"> {{rows.3}} </td>
+            {% endif %}
+            {% endfor %} 
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.3 %}
+            {% if rows.0 == name|upper %}
+            <td>CHEMISTRY</td>
+            <td class="center">{{rows.2}}</td>
+            <td class="center">{{rows.3}}</td>
+            {% endif %}
+            {% endfor %} 
+            
+        </tr>
+        <tr>
+            {% for rows in  student_object.4 %}
+            {% if rows.0 == name|upper %}
+            <td>ENGLISH</td>
+            <td class="center">{{rows.2}}</td>
+            <td class="center">{{rows.3}} </td>
+            {% endif %}
+            {% endfor %}
+            
+        </tr>
+        
+    
+</body>
+</html>
