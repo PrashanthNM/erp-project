@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '*&fmp%jhxm-yolcf7-5-li!oqnc4=i_-b%u4c4c(my(azf$npz'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['miniproject-erp.herokuapp.com','127.0.0.1:8000']
 
